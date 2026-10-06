@@ -1,0 +1,39 @@
+{
+  "model": {
+    "type": "select",
+    "property": "custom_model_data",
+    "fallback": {
+      "type": "model",
+      "model": "item/iron_spear"
+    },
+    "cases": [
+      {
+        "when": "rocket_spear",
+        "model": {
+          "type": "select",
+          "property": "display_context",
+          "cases": [
+            {
+              "when": ["gui", "ground", "fixed", "on_shelf"],
+              "model": {
+                "type": "model",
+                "model": "item/rocket_spear"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "model",
+            "model": "item/rocket_spear_in_hand"
+          }
+        }
+      },
+      {
+        "when": "test",
+        "model": {
+          "type": "model",
+          "model": "item/diamond_sword"
+        }
+      }
+    ]
+  }
+}
