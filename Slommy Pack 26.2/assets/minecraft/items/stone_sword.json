@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "select",
+    "property": "custom_model_data",
+    "fallback": {
+      "type": "model",
+      "model": "item/stone_sword"
+    },
+    "cases": [
+      {
+        "when": "boulder_blade_unrefined",
+        "model": {
+          "type": "model",
+          "model": "item/boulder_blade_unrefined"
+        }
+      },
+      {
+        "when": "test",
+        "model": {
+          "type": "model",
+          "model": "item/diamond_sword"
+        }
+      }
+    ]
+  }
+}
